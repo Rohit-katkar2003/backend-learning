@@ -4,8 +4,8 @@
             "id": 2,
             "name": "Priya Verma",
             "email": "priya.verma@example.com",
-            "age": 25,
-            "city": "Delhi",
+            "age": 30,
+            "city": "Bangalore",
             "is_active": true
         },
         {

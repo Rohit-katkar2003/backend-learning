@@ -1,6 +1,6 @@
 from fastapi import  APIRouter 
 import json
-from models import AddStudent
+from models import AddStudent , UpdateStudent
 router = APIRouter() 
 
 @router.get("/health")
@@ -62,4 +62,74 @@ async def delete_student(student_id:int):
     
 
 ## when you want to update all the field 
-@router.put("/")
+@router.put("/update_student/{student_id}")
+async def update_student(student_id: int, stud: AddStudent):
+    try:
+        data = read_js_data()
+        users = data.get("users", [])
+
+        updated = False
+        print(users)
+        for i, user in enumerate(users):
+            if user["id"] == student_id: 
+                print({
+                    "id": student_id,
+                    "name": stud.name,
+                    "email": stud.email,
+                    "age": stud.age,
+                    "city": stud.city,
+                    "is_active": True
+                })
+                
+                users[i] = {
+                    "id": student_id,
+                    "name": stud.name,
+                    "email": stud.email,
+                    "age": stud.age,
+                    "city": stud.city,
+                    "is_active": True
+                }
+                updated = True
+                break
+
+        if not updated:
+            return {"status": "error", "message": "Student not found"}
+
+        data["users"] = users
+        write_json(data)
+
+        return {"status": "success", "message": "Student fully updated"}
+
+    except Exception as e:
+        return {"status": "Error", "message": f"Got error {e}"} 
+    
+
+@router.patch("/patch_student/{student_id}")
+async def patch_student(student_id: int, stud: UpdateStudent):
+    try:
+        data = read_js_data()
+        users = data.get("users", [])
+
+        updated = False
+
+        for user in users:
+            if user["id"] == student_id:
+
+                update_data = stud.dict(exclude_unset=True)
+
+                for key, value in update_data.items():
+                    user[key] = value
+
+                updated = True
+                break
+
+        if not updated:
+            return {"status": "error", "message": "Student not found"}
+
+        write_json(data)
+
+        return {"status": "success", "message": "Student partially updated"}
+
+    except Exception as e:
+        return {"status": "Error", "message": f"Got error {e}"}
+    
