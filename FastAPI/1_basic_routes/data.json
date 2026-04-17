@@ -1,0 +1,83 @@
+{
+    "users": [
+        {
+            "id": 2,
+            "name": "Priya Verma",
+            "email": "priya.verma@example.com",
+            "age": 25,
+            "city": "Delhi",
+            "is_active": true
+        },
+        {
+            "id": 3,
+            "name": "Rahul Mehta",
+            "email": "rahul.mehta@example.com",
+            "age": 32,
+            "city": "Pune",
+            "is_active": false
+        },
+        {
+            "id": 4,
+            "name": "Sneha Patil",
+            "email": "sneha.patil@example.com",
+            "age": 27,
+            "city": "Nagpur",
+            "is_active": true
+        },
+        {
+            "id": 5,
+            "name": "Vikram Singh",
+            "email": "vikram.singh@example.com",
+            "age": 35,
+            "city": "Jaipur",
+            "is_active": true
+        },
+        {
+            "id": 6,
+            "name": "Neha Gupta",
+            "email": "neha.gupta@example.com",
+            "age": 29,
+            "city": "Bangalore",
+            "is_active": false
+        },
+        {
+            "id": 7,
+            "name": "Arjun Reddy",
+            "email": "arjun.reddy@example.com",
+            "age": 31,
+            "city": "Hyderabad",
+            "is_active": true
+        },
+        {
+            "id": 8,
+            "name": "Kavita Joshi",
+            "email": "kavita.joshi@example.com",
+            "age": 26,
+            "city": "Ahmedabad",
+            "is_active": true
+        },
+        {
+            "id": 9,
+            "name": "Rohit Das",
+            "email": "rohit.das@example.com",
+            "age": 30,
+            "city": "Kolkata",
+            "is_active": false
+        },
+        {
+            "id": 10,
+            "name": "Pooja Nair",
+            "email": "pooja.nair@example.com",
+            "age": 24,
+            "city": "Kochi",
+            "is_active": true
+        },
+        {
+            "id": 21,
+            "name": "akansha",
+            "email": "akansha@example.com",
+            "age": 25,
+            "is_active": true
+        }
+    ]
+}
