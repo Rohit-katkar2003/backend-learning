@@ -1,0 +1,10 @@
+The project we're building
+A production-ready auth API with:
+
+    Async SQLAlchemy + PostgreSQL (or SQLite for local dev)
+    User signup / login with hashed passwords
+    JWT access tokens + refresh tokens
+    Protected routes with role-based access (user / admin)
+    Proper dependency injection
+    Environment-based config with Pydantic Settings
+    Alembic for DB migrations
