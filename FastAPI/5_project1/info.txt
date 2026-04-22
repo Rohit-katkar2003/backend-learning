@@ -8,3 +8,6 @@ A production-ready auth API with:
     Proper dependency injection
     Environment-based config with Pydantic Settings
     Alembic for DB migrations
+
+
+the project about school system
